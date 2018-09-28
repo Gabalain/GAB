@@ -8,24 +8,64 @@
 
 /* Begin PBXBuildFile section */
 		B5E5F826215BED0400E8FB75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F825215BED0400E8FB75 /* AppDelegate.swift */; };
-		B5E5F828215BED0400E8FB75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F827215BED0400E8FB75 /* ViewController.swift */; };
+		B5E5F828215BED0400E8FB75 /* TansactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */; };
 		B5E5F82B215BED0400E8FB75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E5F829215BED0400E8FB75 /* Main.storyboard */; };
 		B5E5F82D215BED0500E8FB75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E5F82C215BED0500E8FB75 /* Assets.xcassets */; };
 		B5E5F830215BED0500E8FB75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E5F82E215BED0500E8FB75 /* LaunchScreen.storyboard */; };
+		B5E5F83B215D026A00E8FB75 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F83A215D026A00E8FB75 /* Transaction.swift */; };
+		B5E5F83D215D08E400E8FB75 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F83C215D08E400E8FB75 /* Category.swift */; };
+		B5E5F83F215D08F200E8FB75 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F83E215D08F200E8FB75 /* Account.swift */; };
+		B5E5F841215D0DE000E8FB75 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F840215D0DE000E8FB75 /* TransactionCell.swift */; };
+		B5E5F843215D1B0D00E8FB75 /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F842215D1B0D00E8FB75 /* AddTransactionVC.swift */; };
+		B5E5F845215D1B6300E8FB75 /* RealmManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F844215D1B6300E8FB75 /* RealmManagement.swift */; };
+		B5E5F847215E213B00E8FB75 /* CommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F846215E213B00E8FB75 /* CommonFunc.swift */; };
+		B5E5F84F215E327B00E8FB75 /* GaBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F84E215E327B00E8FB75 /* GaBTests.swift */; };
+		C88B87C8187FB46F8A879E8A /* Pods_GaB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5A32AAE036DF18CBF70683 /* Pods_GaB.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B5E5F851215E327B00E8FB75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E5F81A215BED0400E8FB75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E5F821215BED0400E8FB75;
+			remoteInfo = GaB;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2E5A32AAE036DF18CBF70683 /* Pods_GaB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GaB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87B546B146E11BFCFF0259DE /* Pods-GaB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GaB/Pods-GaB.release.xcconfig"; sourceTree = "<group>"; };
 		B5E5F822215BED0400E8FB75 /* GaB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E5F825215BED0400E8FB75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5E5F827215BED0400E8FB75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TansactionsVC.swift; sourceTree = "<group>"; };
 		B5E5F82A215BED0400E8FB75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5E5F82C215BED0500E8FB75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5E5F82F215BED0500E8FB75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5E5F831215BED0500E8FB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E5F83A215D026A00E8FB75 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		B5E5F83C215D08E400E8FB75 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B5E5F83E215D08F200E8FB75 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B5E5F840215D0DE000E8FB75 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		B5E5F842215D1B0D00E8FB75 /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
+		B5E5F844215D1B6300E8FB75 /* RealmManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagement.swift; sourceTree = "<group>"; };
+		B5E5F846215E213B00E8FB75 /* CommonFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunc.swift; sourceTree = "<group>"; };
+		B5E5F84C215E327B00E8FB75 /* GaBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E5F84E215E327B00E8FB75 /* GaBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaBTests.swift; sourceTree = "<group>"; };
+		B5E5F850215E327B00E8FB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F40B5FC517A814DE422DB09B /* Pods-GaB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GaB/Pods-GaB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B5E5F81F215BED0400E8FB75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C88B87C8187FB46F8A879E8A /* Pods_GaB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E5F849215E327B00E8FB75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,11 +75,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F38E24CE64243B2FCD5B972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E5A32AAE036DF18CBF70683 /* Pods_GaB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4A52EB2DEC7EA2941ECF775 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F40B5FC517A814DE422DB09B /* Pods-GaB.debug.xcconfig */,
+				87B546B146E11BFCFF0259DE /* Pods-GaB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B5E5F819215BED0400E8FB75 = {
 			isa = PBXGroup;
 			children = (
 				B5E5F824215BED0400E8FB75 /* GaB */,
+				B5E5F84D215E327B00E8FB75 /* GaBTests */,
 				B5E5F823215BED0400E8FB75 /* Products */,
+				A4A52EB2DEC7EA2941ECF775 /* Pods */,
+				6F38E24CE64243B2FCD5B972 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				B5E5F822215BED0400E8FB75 /* GaB.app */,
+				B5E5F84C215E327B00E8FB75 /* GaBTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +115,54 @@
 		B5E5F824215BED0400E8FB75 /* GaB */ = {
 			isa = PBXGroup;
 			children = (
+				B5E5F839215BED2C00E8FB75 /* View */,
+				B5E5F838215BED2600E8FB75 /* Model */,
+				B5E5F837215BED1F00E8FB75 /* Controller */,
 				B5E5F825215BED0400E8FB75 /* AppDelegate.swift */,
-				B5E5F827215BED0400E8FB75 /* ViewController.swift */,
 				B5E5F829215BED0400E8FB75 /* Main.storyboard */,
 				B5E5F82C215BED0500E8FB75 /* Assets.xcassets */,
 				B5E5F82E215BED0500E8FB75 /* LaunchScreen.storyboard */,
 				B5E5F831215BED0500E8FB75 /* Info.plist */,
 			);
 			path = GaB;
+			sourceTree = "<group>";
+		};
+		B5E5F837215BED1F00E8FB75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */,
+				B5E5F842215D1B0D00E8FB75 /* AddTransactionVC.swift */,
+				B5E5F844215D1B6300E8FB75 /* RealmManagement.swift */,
+				B5E5F846215E213B00E8FB75 /* CommonFunc.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B5E5F838215BED2600E8FB75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5E5F83A215D026A00E8FB75 /* Transaction.swift */,
+				B5E5F83C215D08E400E8FB75 /* Category.swift */,
+				B5E5F83E215D08F200E8FB75 /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5E5F839215BED2C00E8FB75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5E5F840215D0DE000E8FB75 /* TransactionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5E5F84D215E327B00E8FB75 /* GaBTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5E5F84E215E327B00E8FB75 /* GaBTests.swift */,
+				B5E5F850215E327B00E8FB75 /* Info.plist */,
+			);
+			path = GaBTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5E5F834215BED0500E8FB75 /* Build configuration list for PBXNativeTarget "GaB" */;
 			buildPhases = (
+				5E42C564F2F468095C471DD5 /* [CP] Check Pods Manifest.lock */,
 				B5E5F81E215BED0400E8FB75 /* Sources */,
 				B5E5F81F215BED0400E8FB75 /* Frameworks */,
 				B5E5F820215BED0400E8FB75 /* Resources */,
+				1B97E11A8976A42F09482DEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -83,6 +186,24 @@
 			productName = GaB;
 			productReference = B5E5F822215BED0400E8FB75 /* GaB.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B5E5F84B215E327B00E8FB75 /* GaBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E5F853215E327B00E8FB75 /* Build configuration list for PBXNativeTarget "GaBTests" */;
+			buildPhases = (
+				B5E5F848215E327B00E8FB75 /* Sources */,
+				B5E5F849215E327B00E8FB75 /* Frameworks */,
+				B5E5F84A215E327B00E8FB75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5E5F852215E327B00E8FB75 /* PBXTargetDependency */,
+			);
+			name = GaBTests;
+			productName = GaBTests;
+			productReference = B5E5F84C215E327B00E8FB75 /* GaBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +217,10 @@
 				TargetAttributes = {
 					B5E5F821215BED0400E8FB75 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					B5E5F84B215E327B00E8FB75 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B5E5F821215BED0400E8FB75;
 					};
 				};
 			};
@@ -113,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				B5E5F821215BED0400E8FB75 /* GaB */,
+				B5E5F84B215E327B00E8FB75 /* GaBTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,19 +254,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5E5F84A215E327B00E8FB75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B97E11A8976A42F09482DEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GaB/Pods-GaB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GaB/Pods-GaB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E42C564F2F468095C471DD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GaB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5E5F81E215BED0400E8FB75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E5F828215BED0400E8FB75 /* ViewController.swift in Sources */,
+				B5E5F83B215D026A00E8FB75 /* Transaction.swift in Sources */,
+				B5E5F83D215D08E400E8FB75 /* Category.swift in Sources */,
+				B5E5F841215D0DE000E8FB75 /* TransactionCell.swift in Sources */,
+				B5E5F843215D1B0D00E8FB75 /* AddTransactionVC.swift in Sources */,
+				B5E5F83F215D08F200E8FB75 /* Account.swift in Sources */,
+				B5E5F847215E213B00E8FB75 /* CommonFunc.swift in Sources */,
+				B5E5F828215BED0400E8FB75 /* TansactionsVC.swift in Sources */,
+				B5E5F845215D1B6300E8FB75 /* RealmManagement.swift in Sources */,
 				B5E5F826215BED0400E8FB75 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5E5F848215E327B00E8FB75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E5F84F215E327B00E8FB75 /* GaBTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5E5F852215E327B00E8FB75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E5F821215BED0400E8FB75 /* GaB */;
+			targetProxy = B5E5F851215E327B00E8FB75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B5E5F829215BED0400E8FB75 /* Main.storyboard */ = {
@@ -213,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,6 +479,7 @@
 		};
 		B5E5F835215BED0500E8FB75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F40B5FC517A814DE422DB09B /* Pods-GaB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +498,7 @@
 		};
 		B5E5F836215BED0500E8FB75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B546B146E11BFCFF0259DE /* Pods-GaB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +512,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5E5F854215E327B00E8FB75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7W47GFKL3;
+				INFOPLIST_FILE = GaBTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alain.GaBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaB.app/GaB";
+			};
+			name = Debug;
+		};
+		B5E5F855215E327B00E8FB75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7W47GFKL3;
+				INFOPLIST_FILE = GaBTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alain.GaBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaB.app/GaB";
 			};
 			name = Release;
 		};
@@ -331,6 +574,15 @@
 			buildConfigurations = (
 				B5E5F835215BED0500E8FB75 /* Debug */,
 				B5E5F836215BED0500E8FB75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E5F853215E327B00E8FB75 /* Build configuration list for PBXNativeTarget "GaBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E5F854215E327B00E8FB75 /* Debug */,
+				B5E5F855215E327B00E8FB75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
