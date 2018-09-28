@@ -29,10 +29,11 @@ func dateToString(_ date: Date, _ stringFormat: String?) -> String {
     } else {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
-    return formatter.string(from: date) // string purpose I add here
+    return formatter.string(from: date)
 }
 
 func floatToString(_ number: Float, _ digits: Int) -> String {
+    if (number == 0) { return "0,00" }
     let formatter = NumberFormatter()
     formatter.decimalSeparator = ","
     formatter.groupingSeparator = " "
@@ -41,5 +42,54 @@ func floatToString(_ number: Float, _ digits: Int) -> String {
     return formatter.string(from: NSNumber(value: number)) ?? "\(number)"
 }
 
+func validText(_ text: UITextField, errorMessage message: String, forVC sender: UIViewController) -> String? {
+    if let text = text.text, text != ""
+    { return text }
+    OperationQueue.main.addOperation
+        { showAlert(title: "Error!", message: message, viewController: sender) }
+    return nil
+}
 
+func validNum(_ text: UITextField, errorMessage message: String, forVC sender: UIViewController) -> Float? {
+    if let num = text.text
+    { return Float(num) }
+    OperationQueue.main.addOperation
+        { showAlert(title: "Error!", message: message, viewController: sender) }
+    return nil
+}
+
+func setCategories() {
+    let categ1 = Category()
+    categ1.name = "Vie courante"
+    categ1.color = "AA3333"
+    saveCategory(categ1)
+    
+    let categ2 = Category()
+    categ2.name = "Pret Immo"
+    categ2.color = "33AA33"
+    saveCategory(categ2)
+    
+    let categ3 = Category()
+    categ3.name = "Enfants"
+    categ3.color = "3333AA"
+    saveCategory(categ3)
+}
+
+func setAccounts() {
+    let acc1 = Account()
+    acc1.name = "AXA 1503"
+    acc1.image = "Axa"
+    saveAccount(acc1)
+    
+    let acc2 = Account()
+    acc2.name = "VISA 6230"
+    acc2.image = "Visa"
+    saveAccount(acc2)
+    
+    let acc3 = Account()
+    acc3.name = "AXA 1305"
+    acc3.image = "Axa"
+    saveAccount(acc3)
+
+}
 

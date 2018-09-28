@@ -25,6 +25,8 @@ class TransactionCell: UITableViewCell {
     func configureCell(withTransaction transaction: Transaction,atIndex index: Int) {
         titleLbl.text = transaction.title
         amountLbl.text = floatToString(transaction.amount, 2)
+        dateLbl.text = dateToString(transaction.date, "dd-MM") 
+        
         if index % 2 == 0 { self.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.200395976) }
 
     }

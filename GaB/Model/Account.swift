@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class Account: Object {
-    @objc dynamic var name : String = ""
-    @objc dynamic var image : String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var image: String = ""
     let transactions = List<Transaction>()
 }

@@ -12,7 +12,7 @@ import RealmSwift
 class TransactionsVC: UIViewController {
     
     @IBOutlet weak var transactionsTV: UITableView!
-    
+
     var transactions: Results<Transaction>?
     var categories: Results<Category>?
     var accounts: Results<Account>?
@@ -29,14 +29,22 @@ class TransactionsVC: UIViewController {
         transactions = loadTransactions()
         categories = loadCategories()
         accounts = loadAccounts()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("Transaction: ", transactions)
+        transactionsTV.reloadData()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    @IBAction func resetTransactionsPressed(_ sender: Any) {
+        resetTransactions()
+        transactionsTV.reloadData()
     }
 }
 

@@ -158,6 +158,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Transactions" id="BwC-pv-cjN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="VPc-Nz-06h">
+                            <connections>
+                                <action selector="resetTransactionsPressed:" destination="BYZ-38-t0r" id="SUU-89-O0f"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="weS-ys-zvK">
                             <connections>
                                 <segue destination="Mz0-gg-tTI" kind="presentation" identifier="addTransaction" id="zHt-ws-S3p"/>

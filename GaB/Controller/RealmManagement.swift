@@ -108,3 +108,15 @@ func saveAccount(_ account: Account) {
         print("Error saving account \(error)")
     }
 }
+
+func resetTransactions() {
+    let transactions = loadTransactions()
+    do {
+        try realm.write {
+            realm.delete(transactions)
+        }
+    } catch {
+        print("Error deleting transaction, \(error)")
+    }
+}
+

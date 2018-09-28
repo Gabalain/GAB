@@ -14,12 +14,6 @@ class AddTransactionVC: UIViewController, UITextFieldDelegate {
 //    var transactions: Results<Transaction>?
     var categories: Results<Category>?
     var accounts: Results<Account>?
-//
-//    var transactionTitle: String?
-//    var transactionAmount: Float?
-//    var transactionDate : String?
-//    var categoryName: String?
-//    var accountName: String?
 
     @IBOutlet weak var titleTxt: UITextField!
     @IBOutlet weak var amountTxt: UITextField!
@@ -39,9 +33,15 @@ class AddTransactionVC: UIViewController, UITextFieldDelegate {
         
         self.accountPicker.delegate = self
         self.accountPicker.dataSource = self
-        
+
         categories = loadCategories()
         accounts = loadAccounts()
+        print("Categories: ", categories)
+        print("Accounts: ", accounts)
+        
+        // To set Categories and Accounts only
+        // setAccounts()
+        // setCategories()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -50,17 +50,21 @@ class AddTransactionVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func savePressed(_ sender: Any) {
-        guard let transactionTitle = validText(titleTxt, errorMessage: "Le titre de la transaction est obligatoire.\nMerci de le renseigner."),
-            let transactionAmount = validNum(amountTxt, errorMessage: "Valeur entrée non valide.\nFormat: xxx,xx")
+        guard let transactionTitle = validText(titleTxt, errorMessage: "Le titre de la transaction est obligatoire.\nMerci de le renseigner.", forVC: self),
+            let transactionAmount = validNum(amountTxt, errorMessage: "Valeur entrée non valide.\nFormat: xxx,xx", forVC: self)
             else  { return }
         
         // Create NewTransaction with correct values and save it
         let newTransaction = Transaction()
         newTransaction.title = transactionTitle
         newTransaction.amount = transactionAmount
-        newTransaction.date = dateToString(self.dayPicker.date, "dd-MM-yyyy") 
-        
+        newTransaction.date = self.dayPicker.date
         saveTransaction(newTransaction)
+        
+        // Save Category in list
+        
+        // Save Account in list
+
         
         // dismiss modal and go back to transactions List
         dismiss(animated: true, completion: nil)
@@ -69,24 +73,6 @@ class AddTransactionVC: UIViewController, UITextFieldDelegate {
     @IBAction func cancelPressed(_ sender: Any) {
         // dismiss modal and go back to transactions List
         dismiss(animated: true, completion: nil)
-    }
-    
-    func validText(_ text:UITextField, errorMessage message:String) -> String?
-    {
-        if let text = text.text, text != ""
-        { return text }
-        OperationQueue.main.addOperation
-            { showAlert(title: "Error!", message: message, viewController: self) }
-        return nil
-    }
-    
-    func validNum(_ text:UITextField, errorMessage message:String) -> Float?
-    {
-        if let num = text.text
-        { return Float(num) }
-        OperationQueue.main.addOperation
-            { showAlert(title: "Error!", message: message, viewController: self) }
-        return nil
     }
 }
 

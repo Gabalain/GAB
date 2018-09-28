@@ -21,10 +21,16 @@ class GaBTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testConversionDateToString() {
+    func testDateToString() {
         let date = Date()
         let stringFormat = "dd-MM-yyyy"
         XCTAssertEqual( dateToString(date, stringFormat), "28-09-2018")
+    }
+    
+    func testFloatToString() {
+        let float:Float = 0
+        let resp = "0,00"
+        XCTAssertEqual(floatToString(float, 2), resp)
     }
     
     func testValidText(){
@@ -40,11 +46,6 @@ class GaBTests: XCTestCase {
         let errorMessage = "Ca marche pas"
         XCTAssertEqual(ATVC.validNum(UITF, errorMessage: errorMessage), 1.0)
     }
-    
-    func testVvalidNum() {
 
-        let date = Date()
-        let stringFormat = "dd-MM-yyyy"
-        XCTAssertEqual( dateToString(date, stringFormat), "28-09-2018")
-    }
+
 }

@@ -12,10 +12,10 @@ import RealmSwift
 class Transaction : Object {
     
     // Properties
-    @objc dynamic var date : String = ""
-    @objc dynamic var title : String = ""
-    @objc dynamic var amount : Float = 0.0
-    @objc dynamic var reccurent : Bool = false
+    @objc dynamic var date: Date = Date()
+    @objc dynamic var title: String = ""
+    @objc dynamic var amount: Float = 0.0
+    @objc dynamic var reccurent: Bool = false
     var category = LinkingObjects(fromType: Category.self, property: "transactions")
     var account = LinkingObjects(fromType: Account.self, property: "transactions")
 }
