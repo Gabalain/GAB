@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B545CCF8215E84100091DAB1 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545CCF7215E84100091DAB1 /* GlobalVars.swift */; };
 		B5E5F826215BED0400E8FB75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F825215BED0400E8FB75 /* AppDelegate.swift */; };
 		B5E5F828215BED0400E8FB75 /* TansactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */; };
 		B5E5F82B215BED0400E8FB75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E5F829215BED0400E8FB75 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		2E5A32AAE036DF18CBF70683 /* Pods_GaB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GaB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B546B146E11BFCFF0259DE /* Pods-GaB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GaB/Pods-GaB.release.xcconfig"; sourceTree = "<group>"; };
+		B545CCF7215E84100091DAB1 /* GlobalVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		B5E5F822215BED0400E8FB75 /* GaB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E5F825215BED0400E8FB75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TansactionsVC.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B5E5F83A215D026A00E8FB75 /* Transaction.swift */,
 				B5E5F83C215D08E400E8FB75 /* Category.swift */,
 				B5E5F83E215D08F200E8FB75 /* Account.swift */,
+				B545CCF7215E84100091DAB1 /* GlobalVars.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,12 +277,14 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -315,6 +320,7 @@
 				B5E5F83D215D08E400E8FB75 /* Category.swift in Sources */,
 				B5E5F841215D0DE000E8FB75 /* TransactionCell.swift in Sources */,
 				B5E5F843215D1B0D00E8FB75 /* AddTransactionVC.swift in Sources */,
+				B545CCF8215E84100091DAB1 /* GlobalVars.swift in Sources */,
 				B5E5F83F215D08F200E8FB75 /* Account.swift in Sources */,
 				B5E5F847215E213B00E8FB75 /* CommonFunc.swift in Sources */,
 				B5E5F828215BED0400E8FB75 /* TansactionsVC.swift in Sources */,

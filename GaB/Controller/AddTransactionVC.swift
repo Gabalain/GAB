@@ -36,8 +36,8 @@ class AddTransactionVC: UIViewController, UITextFieldDelegate {
 
         categories = loadCategories()
         accounts = loadAccounts()
-        print("Categories: ", categories)
-        print("Accounts: ", accounts)
+        print("Categories: ", categories!)
+        print("Accounts: ", accounts!)
         
         // To set Categories and Accounts only
         // setAccounts()
@@ -62,9 +62,12 @@ class AddTransactionVC: UIViewController, UITextFieldDelegate {
         saveTransaction(newTransaction)
         
         // Save Category in list
+        let selectedCategory = categories![categoryPicker.selectedRow(inComponent: 0)]
+        setCategoryOfTransaction(category: selectedCategory, transaction: newTransaction)
         
         // Save Account in list
-
+        let selectedAccount = accounts![accountPicker.selectedRow(inComponent: 0)]
+        setAccountOfTransaction(account: selectedAccount, transaction: newTransaction)
         
         // dismiss modal and go back to transactions List
         dismiss(animated: true, completion: nil)

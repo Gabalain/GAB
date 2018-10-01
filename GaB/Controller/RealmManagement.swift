@@ -17,9 +17,45 @@ func loadTransactions() -> Results<Transaction> {
     return realm.objects(Transaction.self)
 }
 
-func loadTransactionsInAccount(_ account: String)  -> Results<Transaction> {
+func loadTransactionsInAccount(_ accountName: String)  -> Results<Transaction> {
+    // Find Account with this name
+    let predicate1 = NSPredicate(format: "name == %@", accountName)
+    let account = realm.objects(Account.self).filter(predicate1).first ?? realm.objects(Account.self).first!
+    // Query using an NSPredicate    
+    let predicate2 = NSPredicate(format: "ANY account = %@", account)
+    print(predicate2)
+    return realm.objects(Transaction.self).filter(predicate2)
+}
+
+func loadTransactionsInAccountWithMonthAndYear(accountName: String, month: Int, year: Int)  -> Results<Transaction> {
     // Query using an NSPredicate
-    let predicate = NSPredicate(format: "account = %@", account)
+    var components = DateComponents()
+    components.day = 1
+    components.month = month
+    components.year = year
+    var startDate = Calendar.current.date(from: components)
+    components.day = 0
+    components.month = 0
+    components.year = 0
+    components.hour = 14
+    startDate = Calendar.current.date(byAdding: components, to: startDate!)
+    print(month, year, startDate!)
+    
+    //Now create endDateOfMonth using startDateOfMonth
+    components.year = 0
+    components.month = 1
+    components.day = -1
+    components.hour = 0
+    let endDate = Calendar.current.date(byAdding: components, to: startDate!)
+    print(month, year, endDate!)
+    
+    // Find Account with name accountName
+    let predicate1 = NSPredicate(format: "name == %@", accountName)
+    let account = realm.objects(Account.self).filter(predicate1).first ?? realm.objects(Account.self).first!
+
+    let predicate = NSPredicate(format: "ANY account == %@ AND date >= %@ AND date <= %@", account, startDate! as CVarArg, endDate! as CVarArg)
+    
+    print(predicate)
     return realm.objects(Transaction.self).filter(predicate)
 }
 
@@ -39,8 +75,20 @@ func loadTransactionsInAccount(_ account: String)  -> Results<Transaction> {
 func loadCategories() -> Results<Category> {
     return realm.objects(Category.self)
 }
+
+func setCategoryOfTransaction(category: Category, transaction: Transaction) {
+    do {
+        try realm.write {
+            category.transactions.append(transaction)
+        }
+    } catch {
+        print("Error setting category of Transaction ------------------------")
+        debugPrint(error)
+    }
+}
+
 func getCategoryColor(_ categoryName: String) -> String {
-    let predicate = NSPredicate(format: "category.name == %@", categoryName)
+    let predicate = NSPredicate(format: "name == %@", categoryName)
     return realm.objects(Category.self).filter(predicate).first?.color ?? "98a5a6"
 }
 //func deleteCategory(at index: Int) {
@@ -58,6 +106,22 @@ func getCategoryColor(_ categoryName: String) -> String {
 //MARK: - Accounts actions
 func loadAccounts() -> Results<Account> {
     return realm.objects(Account.self)
+}
+
+func setAccountOfTransaction(account: Account, transaction: Transaction) {
+    do {
+        try realm.write {
+            account.transactions.append(transaction)
+        }
+    } catch {
+        print("Error setting account of Transaction ------------------------")
+        debugPrint(error)
+    }
+}
+
+func getAccountSelected(_ accountName: String) -> Account {
+    let predicate = NSPredicate(format: "name == %@", accountName)
+    return realm.objects(Account.self).filter(predicate).first ?? realm.objects(Account.self).first!
 }
 //func deleteAccount(at index: Int) {
 //    let accounts = loadAccounts()
@@ -114,6 +178,7 @@ func resetTransactions() {
     do {
         try realm.write {
             realm.delete(transactions)
+            
         }
     } catch {
         print("Error deleting transaction, \(error)")
