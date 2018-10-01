@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B545CCF8215E84100091DAB1 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545CCF7215E84100091DAB1 /* GlobalVars.swift */; };
+		B545CCFA21626C5C0091DAB1 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545CCF921626C5C0091DAB1 /* DashboardVC.swift */; };
+		B545CD0621627BC40091DAB1 /* NewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545CD0521627BC40091DAB1 /* NewAccountVC.swift */; };
 		B5E5F826215BED0400E8FB75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F825215BED0400E8FB75 /* AppDelegate.swift */; };
 		B5E5F828215BED0400E8FB75 /* TansactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */; };
 		B5E5F82B215BED0400E8FB75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E5F829215BED0400E8FB75 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		2E5A32AAE036DF18CBF70683 /* Pods_GaB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GaB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B546B146E11BFCFF0259DE /* Pods-GaB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GaB/Pods-GaB.release.xcconfig"; sourceTree = "<group>"; };
 		B545CCF7215E84100091DAB1 /* GlobalVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
+		B545CCF921626C5C0091DAB1 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		B545CD0521627BC40091DAB1 /* NewAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountVC.swift; sourceTree = "<group>"; };
 		B5E5F822215BED0400E8FB75 /* GaB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E5F825215BED0400E8FB75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TansactionsVC.swift; sourceTree = "<group>"; };
@@ -132,10 +136,12 @@
 		B5E5F837215BED1F00E8FB75 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B545CCF921626C5C0091DAB1 /* DashboardVC.swift */,
 				B5E5F827215BED0400E8FB75 /* TansactionsVC.swift */,
 				B5E5F842215D1B0D00E8FB75 /* AddTransactionVC.swift */,
 				B5E5F844215D1B6300E8FB75 /* RealmManagement.swift */,
 				B5E5F846215E213B00E8FB75 /* CommonFunc.swift */,
+				B545CD0521627BC40091DAB1 /* NewAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +326,8 @@
 				B5E5F83D215D08E400E8FB75 /* Category.swift in Sources */,
 				B5E5F841215D0DE000E8FB75 /* TransactionCell.swift in Sources */,
 				B5E5F843215D1B0D00E8FB75 /* AddTransactionVC.swift in Sources */,
+				B545CCFA21626C5C0091DAB1 /* DashboardVC.swift in Sources */,
+				B545CD0621627BC40091DAB1 /* NewAccountVC.swift in Sources */,
 				B545CCF8215E84100091DAB1 /* GlobalVars.swift in Sources */,
 				B5E5F83F215D08F200E8FB75 /* Account.swift in Sources */,
 				B5E5F847215E213B00E8FB75 /* CommonFunc.swift in Sources */,

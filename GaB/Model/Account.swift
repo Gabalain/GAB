@@ -11,6 +11,7 @@ import RealmSwift
 
 class Account: Object {
     @objc dynamic var name: String = ""
+    @objc dynamic var number: String = ""
     @objc dynamic var image: String = ""
     let transactions = List<Transaction>()
 }
